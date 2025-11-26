@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\awanh\\Coding\\PortfolioWebpage\\Portfolio\\Portfolio.csproj": {}
+    "C:\\Users\\awanh\\Desktop\\Github Repos\\Portfolio\\Portfolio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\awanh\\Coding\\PortfolioWebpage\\Portfolio\\Portfolio.csproj": {
+    "C:\\Users\\awanh\\Desktop\\Github Repos\\Portfolio\\Portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\awanh\\Coding\\PortfolioWebpage\\Portfolio\\Portfolio.csproj",
+        "projectUniqueName": "C:\\Users\\awanh\\Desktop\\Github Repos\\Portfolio\\Portfolio.csproj",
         "projectName": "Portfolio",
-        "projectPath": "C:\\Users\\awanh\\Coding\\PortfolioWebpage\\Portfolio\\Portfolio.csproj",
+        "projectPath": "C:\\Users\\awanh\\Desktop\\Github Repos\\Portfolio\\Portfolio.csproj",
         "packagesPath": "C:\\Users\\awanh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\awanh\\Coding\\PortfolioWebpage\\Portfolio\\obj\\",
+        "outputPath": "C:\\Users\\awanh\\Desktop\\Github Repos\\Portfolio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\awanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\awanh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
