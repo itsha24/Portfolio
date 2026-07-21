@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
+            const theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ site.url }}{{ '/assets/og-image.png' | relative_url }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ site.url }}{{ '/assets/og-image.png' | relative_url }}" />
+    <title>{{ page.title }}</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" />
+    <!-- Self-hosted Plus Jakarta Sans-->
+    <link href="{{ '/fonts/fonts.css' | relative_url }}" rel="stylesheet" />
+    <!-- Self-hosted Bootstrap icons-->
+    <link href="{{ '/css/bootstrap-icons/bootstrap-icons.css' | relative_url }}" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ '/css/site.css' | relative_url }}" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="{{ '/' | relative_url }}"><span class="fw-bolder text-primary">Hassan Awan</span></a>
+                <button id="themeToggle" type="button" class="theme-toggle order-lg-2 ms-auto ms-lg-0" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-stars"></i>
+                    <i class="bi bi-sun"></i>
+                </button>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link{% if page.url == '/resume.html' %} active{% endif %}" href="{{ '/resume.html' | relative_url }}">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link{% if page.url == '/projects.html' %} active{% endif %}" href="{{ '/projects.html' | relative_url }}">Work</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link{% if page.url == '/contact.html' %} active{% endif %}" href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            {{ content }}
+        </main>
+    </div>
+
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; | Hassan's Portfolio {{ 'now' | date: "%Y" }} &middot; v1.0.0</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="backToTop" type="button" class="btn btn-primary rounded-circle back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <script src="{{ '/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <script>
+        const backToTop = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            backToTop.classList.toggle("show", window.scrollY > 400);
+        });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const themeToggle = document.getElementById("themeToggle");
+        themeToggle.addEventListener("click", () => {
+            const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+        });
+    </script>
+</body>
+
+</html>

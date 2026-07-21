@@ -1,0 +1,15 @@
+title: Hassan Awan
+description: >-
+  Hassan Awan — Software Developer specializing in full-stack web development,
+  test automation, and cloud applications.
+author: Hassan Awan
+url: "https://itsha24.github.io"
+baseurl: "/Portfolio"
+
+plugins:
+  - jekyll-sitemap
+
+# GitHub Pages builds every .html file with front matter through Jekyll by
+# default; nothing else needs to be configured for a plain project site.
+# If you ever move to a custom domain or rename the repo, update url/baseurl
+# above (baseurl: "" for a root domain) so internal links keep resolving.
